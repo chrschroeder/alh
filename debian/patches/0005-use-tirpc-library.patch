@@ -1,0 +1,23 @@
+From: =?utf-8?q?Christoph_Schr=C3=B6der?=
+ <christoph.schroeder@helmholtz-berlin.de>
+Date: Tue, 27 Jan 2026 12:52:51 +0100
+Subject: use tirpc library
+
+---
+ Makefile | 3 +++
+ 1 file changed, 3 insertions(+)
+
+diff --git a/Makefile b/Makefile
+index 7c86ca0..acc12e2 100755
+--- a/Makefile
++++ b/Makefile
+@@ -187,6 +187,9 @@ RCS_WIN32 += alh.rc
+ 
+ PROD_SYS_LIBS += pthread
+ 
++USR_INCLUDES += -I/usr/include/tirpc
++PROD_SYS_LIBS += tirpc
++
+ include $(TOP)/configure/RULES
+ 
+ alh.res:../alh.ico
