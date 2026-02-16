@@ -12,6 +12,11 @@ export CROSS_COMPILER_TARGET_ARCHS :=
 # EPICS uses -O3, let's not lower the standards
 export DEB_CFLAGS_STRIP = -O2
 export DEB_CXXFLAGS_STRIP = -O2
+export DEB_CFLAGS_MAINT_APPEND = -O3
+export DEB_CXXFLAGS_MAINT_APPEND = -O3
+
+# enable security options
+export DEB_BUILD_MAINT_OPTIONS=hardening=+all
 
 # Add Debian flags to the EPICS build
 DEB_USR_CXXFLAGS:=$(shell dpkg-buildflags --get CXXFLAGS)
