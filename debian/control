@@ -2,12 +2,12 @@ Source: alh
 Section: contrib/admin
 Priority: optional
 Maintainer: Michael Davidsaver <mdavidsaver@gmail.com>
-Build-Depends: debhelper (>= 9), cdbs,
-               epics-dev (>= 3.15.5-1~), epics-debhelper (>= 8.17~),
+Build-Depends: debhelper (>= 13), debhelper-compat (= 13),
+               epics-dev (>= 3.15.5-1~), epics-debhelper (>= 8.18~),
                epics-extensions-dev (>= 20130514.5~),
                htmldoc,
                libmotif-dev, libtirpc-dev, libx11-dev, libxmu-dev, libxtst-dev
-Standards-Version: 4.3.0.3
+Standards-Version: 4.7.2
 Homepage: http://www.aps.anl.gov/epics/extensions/alh/index.php
 
 Package: alh
@@ -21,7 +21,10 @@ Description: EPICS Alarm Handler
 Package: alh-doc
 Section: contrib/doc
 Architecture: all
-Conflicts: alh (<< 1.2.25-1)
-Description: EPICS Alarm Handler
+Depends: ${misc:Depends}
+Breaks: alh (<< 1.2.25-1)
+Description: Documentation for EPICS Alarm Handler
  A specialized EPICS client which listens for alarms on a preset list
  of channels.
+ .
+ The alh Manual in html form.
