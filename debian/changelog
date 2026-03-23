@@ -1,3 +1,21 @@
+alh (1.2.35-2) unstable; urgency=medium
+
+  * set compat level to 10
+  * legacy rpc headers were removed from glibc
+  * Priority extra is deprecated
+  * update dependencies and Standards-Version for Debian 13
+  * add watch file
+  * update copyright file according to Debian policy
+  * move from cdbs to standard debhelper
+  * disable *-debug target
+  * enable security options
+  * install alh_DB
+  * ingnore lintian source package warnings
+  * add doc-base
+  * binary-without-manpage was renamed
+
+ -- Christoph Schröder <christoph.schroeder@helmholtz-berlin.de>  Mon, 23 Mar 2026 10:08:18 +0100
+
 alh (1.2.35-1) unstable; urgency=medium
 
   * remove libxp-dev dependency
@@ -67,4 +85,3 @@ alh (1.2.24-1) unstable; urgency=low
   * Initial release
 
  -- Michael Davidsaver <mdavidsaver@bnl.gov>  Fri, 28 Aug 2009 13:24:29 -0400
-
